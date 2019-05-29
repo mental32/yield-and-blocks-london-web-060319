@@ -1,6 +1,8 @@
 def hello_t(names)
-  for name in names do
-    yield(name)
+  if block_given?
+    for name in names do
+      yield(name)
+    end
   end
 end
 
